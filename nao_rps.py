@@ -9,7 +9,7 @@ nao_port = 9559  # Default Naoqi port
 
 # Initialize proxies
 tts = ALProxy("ALTextToSpeech", nao_ip, nao_port)
-tts.setParameter("speed", 80)  # Slow down speech speed (adjust as needed)
+tts.setParameter("speed", 80)  # Slow down speech speed 
 asr = ALProxy("ALSpeechRecognition", nao_ip, nao_port)
 posture = ALProxy("ALRobotPosture", nao_ip, nao_port)
 motion = ALProxy("ALMotion", nao_ip, nao_port)
@@ -124,7 +124,7 @@ def play_rps():
                 else:
                     tts.say("I didn't quite get that. Please try again.")
 
-        # Determine the winner and update scores (rest of the game logic)
+        # Determine the winner and update scores 
         if nao_choice == user_choice:
             tts.say("It's a tie!")
         elif (nao_choice == "rock" and user_choice == "scissors") or \
